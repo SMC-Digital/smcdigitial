@@ -34,13 +34,31 @@
   <div style="max-width:760px;margin:0 auto;position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(115deg,#0A0B0D 30%,#06231e 75%,#0a3d33);padding:60px 48px;text-align:center">
     <div style="position:absolute;inset:0;background:radial-gradient(80% 120% at 90% 90%,rgba(47,220,192,.25),transparent 55%)"></div>
     <div style="position:relative">
-      <h2 style="font:700 clamp(24px,3.4vw,32px)/1.15 Poppins;letter-spacing:-.02em;color:#fff;margin:0 0 12px">Start with an email.</h2>
+      <h2 style="font:700 clamp(24px,3.4vw,32px)/1.15 Poppins;letter-spacing:-.02em;color:#fff;margin:0 0 12px">Send a short note.</h2>
       <p style="font:400 15px/1.65 Manrope;color:#9aa0a6;max-width:44ch;margin:0 auto 28px">A few lines about your business, what you sell and what you want marketing to do. That's all we need to get moving.</p>
-      <div data-r="wrap" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href="mailto:sean@smcdigital.com.au?subject=Marketing%20enquiry" class="bh-teal" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#0D0F12;font:700 15px Manrope;padding:15px 28px;border-radius:100px;text-decoration:none">Email sean@smcdigital.com.au</a>
-        <a href="tel:+61448448324" class="bh-ghost" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font:700 15px Manrope;padding:15px 26px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Call 0448 448 324</a>
+      <style>
+        #contact-form input,#contact-form textarea{width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px 16px;color:#fff;font:400 15px Manrope;outline:none;transition:border-color .15s}
+        #contact-form input:focus,#contact-form textarea:focus{border-color:rgba(66,234,206,.65)}
+        #contact-form ::placeholder{color:#7d8388}
+        #contact-form button:hover{filter:brightness(1.08)}
+      </style>
+      <form id="contact-form" action="https://formspree.io/f/mrenkebn" method="POST" style="display:flex;flex-direction:column;gap:14px;max-width:540px;margin:0 auto;text-align:left">
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px"><input type="text" name="name" placeholder="Your name" required></div>
+          <div style="flex:1;min-width:200px"><input type="email" name="email" placeholder="Email address" required></div>
+        </div>
+        <input type="text" name="business" placeholder="Business or website (optional)">
+        <textarea name="message" rows="5" placeholder="What do you sell, and where does marketing feel stuck?" required></textarea>
+        <input type="hidden" name="_subject" value="New enquiry — SMC Digital contact form">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" style="background:#42eace;color:#0A0B0D;font:700 15px Manrope;padding:15px 28px;border-radius:100px;border:none;cursor:pointer">Send Message</button>
+        <p id="form-status" role="status" style="display:none;font:400 14px/1.5 Manrope;margin:4px 0 0;text-align:center"></p>
+      </form>
+      <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:26px;font:600 14px Manrope">
+        <a href="mailto:sean@smcdigital.com.au?subject=Marketing%20enquiry" style="color:#9aa0a6;text-decoration:none">Or email sean@smcdigital.com.au</a>
+        <a href="tel:+61448448324" style="color:#9aa0a6;text-decoration:none">Call 0448 448 324</a>
       </div>
-      <p style="font:400 13px/1.6 Manrope;color:#8a8f94;margin:22px 0 0">Prefer a scheduled time? Say so in your email and we'll line up a free 15 minute call.</p>
+      <p style="font:400 13px/1.6 Manrope;color:#8a8f94;margin:22px 0 0">Prefer a scheduled time? Say so in your message and we'll line up a free 15 minute call.</p>
     </div>
   </div>
 </div>
@@ -72,5 +90,27 @@
 
 </div>
 <script src="assets/site.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var form = this, btn = form.querySelector('button'), status = document.getElementById('form-status');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    var res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      form.reset();
+      status.textContent = "Thanks — your message is in. We'll come back to you within one business day.";
+      status.style.color = '#42eace';
+    } else {
+      status.textContent = 'Something went wrong — please email sean@smcdigital.com.au instead.';
+      status.style.color = '#ff8f8f';
+    }
+  } catch (err) {
+    status.textContent = 'Network error — please email sean@smcdigital.com.au instead.';
+    status.style.color = '#ff8f8f';
+  }
+  status.style.display = 'block'; btn.disabled = false; btn.textContent = 'Send Message';
+});
+</script>
 </body>
 </html>
