@@ -128,7 +128,8 @@
         this.dotRadius = this.maxDotRadius;
         this.dotPulseSpeed = 0.0006 + Math.random() * 0.0012;
         this.dotPulsePhase = Math.random() * Math.PI * 2;
-        this.opacity = 0.88 + Math.random() * 0.12;
+        this.sinFactor = sinFactor;
+        this.opacity = Math.min(1, 0.88 + sinFactor * 0.12 + Math.random() * 0.06);
         this.baseOpacity = this.opacity;
         this.fadeTarget = this.opacity;
         this.fadePhase = Math.random() * Math.PI * 2;
@@ -136,7 +137,7 @@
         this.fadeChance = 0.003 + Math.random() * 0.004;
         this.isFading = false;
         this.fadeTarget = this.opacity;
-        this.lineWidth = (0.1 + Math.random() * 0.3) * (1 + sinFactor * 0.8);   // front-facing needles thicker / more solid
+        this.lineWidth = (0.1 + Math.random() * 0.3) * (1 + sinFactor * 1.6) + sinFactor * 0.35;   // front-facing needles thicker / more solid
         this.swaySpeed = 0.00011 + Math.random() * 0.00024;
         this.swayAmp = 0.01 + Math.random() * 0.03;
         this.swayPhase = Math.random() * Math.PI * 2;
@@ -161,7 +162,8 @@
         const sway3 = Math.sin(t * this.swaySpeed3 + this.swayPhase3) * this.swayAmp3;
         this.angle = this.baseAngle + this.angleOffset + sway1 + sway2 + sway3;
         if (!this.isFading && Math.random() < this.fadeChance * dt) {
-          this.isFading = true; this.fadeTarget = 0.35 + Math.random() * 0.2;
+          // front-facing needles only dip a little; edge needles keep the deep shimmer
+          this.isFading = true; this.fadeTarget = Math.min(this.baseOpacity, 0.35 + this.sinFactor * 0.35 + Math.random() * 0.2);
         } else if (this.isFading && this.opacity <= this.fadeTarget + 0.02) {
           this.isFading = false; this.fadeTarget = this.baseOpacity * (0.9 + Math.random() * 0.1);
         }
