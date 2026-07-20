@@ -47,13 +47,14 @@
     host.addEventListener('mouseleave', function () { mouseActive = false; });
 
     class SubFiber {
-      constructor(baseAngle, lengthFraction, parentLength, opacityMult, lineWidthMult, dotRadius) {
+      constructor(baseAngle, lengthFraction, parentLength, dotRadius) {
         this.angleOffset = (Math.random() - 0.5) * 0.06;
         this.baseAngle = baseAngle + (Math.random() - 0.5) * 0.08;
         this.angle = this.baseAngle + this.angleOffset;
         this.length = parentLength * lengthFraction;
-        this.opacityMult = opacityMult;
-        this.lineWidthMult = lineWidthMult;
+        // shorter needles read as pointing at the viewer: brighter and thicker the shorter they are
+        this.opacityMult = Math.min(1, 1.08 - lengthFraction * 0.28);
+        this.lineWidthMult = Math.min(0.95, 0.98 - lengthFraction * 0.15);
         this.dotRadius = dotRadius;
         this.swaySpeed = 0.00016 + Math.random() * 0.00032;
         this.swayAmp = 0.015 + Math.random() * 0.042;
@@ -149,11 +150,10 @@
         this.curveBendTarget = this.curveBend;
         this.mouseAngleOffset = 0; this.mouseCurveOffset = 0;
         this.subFibers = [];
-        // shorter sub-needles read as pointing at the viewer — keep them the MOST solid, not the least
-        this.subFibers.push(new SubFiber(this.baseAngle, 0.65 + Math.random() * 0.2, this.maxLength, 0.85, 0.85, 0.8 + Math.random() * 1.0));
-        this.subFibers.push(new SubFiber(this.baseAngle, 0.4 + Math.random() * 0.2, this.maxLength, 0.95, 0.9, 0.6 + Math.random() * 0.9));
+        this.subFibers.push(new SubFiber(this.baseAngle, 0.65 + Math.random() * 0.2, this.maxLength, 0.8 + Math.random() * 1.0));
+        this.subFibers.push(new SubFiber(this.baseAngle, 0.4 + Math.random() * 0.2, this.maxLength, 0.6 + Math.random() * 0.9));
         if (Math.random() > 0.3) {
-          this.subFibers.push(new SubFiber(this.baseAngle, 0.18 + Math.random() * 0.17, this.maxLength, 1.0, 0.95, 0.5 + Math.random() * 0.7));
+          this.subFibers.push(new SubFiber(this.baseAngle, 0.18 + Math.random() * 0.17, this.maxLength, 0.5 + Math.random() * 0.7));
         }
       }
       update(dt, t) {
