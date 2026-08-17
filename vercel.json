@@ -15,6 +15,11 @@
       "destination": "https://www.smcdigital.com.au/:path*",
       "permanent": true
     },
+    { "source": "/golf", "destination": "/golf-club-audit", "permanent": false },
+    { "source": "/tee-sheet-audit", "destination": "/golf-club-audit", "permanent": false },
+    { "source": "/book-a-call", "destination": "/book", "permanent": true },
+    { "source": "/booking", "destination": "/book", "permanent": true },
+    { "source": "/call", "destination": "/book", "permanent": true },
     { "source": "/ppc", "destination": "/google-ads", "permanent": true },
     { "source": "/audit", "destination": "/audits", "permanent": true },
     { "source": "/social-media-management", "destination": "/meta-ads", "permanent": true },
