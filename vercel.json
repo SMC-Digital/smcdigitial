@@ -17,6 +17,7 @@
     },
     { "source": "/golf", "destination": "/golf-club-audit", "permanent": false },
     { "source": "/tee-sheet-audit", "destination": "/golf-club-audit", "permanent": false },
+    { "source": "/launch", "destination": "/website-and-ads", "permanent": false },
     { "source": "/book", "destination": "/contact", "permanent": false },
     { "source": "/book-a-call", "destination": "/contact", "permanent": false },
     { "source": "/booking", "destination": "/contact", "permanent": false },

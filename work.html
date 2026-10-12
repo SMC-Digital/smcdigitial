@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="/smc-consent.js" data-ga="G-WRH7X0W8TG" data-privacy="/privacy" data-bg="#2443FF" data-accent="#FF5A1F" data-accent-text="#12131A" data-link="#FFFFFF"></script>
+<title>Selected Design Work | SMC Digital</title>
+<meta name="description" content="Selected design work from SMC Digital: campaign and social creative, print, big screen artwork, brochures and live landing pages for Queensland clients.">
+<link rel="canonical" href="https://www.smcdigital.com.au/work">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SMC Digital">
+<meta property="og:title" content="Selected Design Work | SMC Digital">
+<meta property="og:description" content="Selected design work from SMC Digital: campaign and social creative, print, big screen artwork, brochures and live landing pages for Queensland clients.">
+<meta property="og:url" content="https://www.smcdigital.com.au/work">
+<meta property="og:image" content="https://www.smcdigital.com.au/assets/work/portfolio/proam-board.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.smcdigital.com.au/assets/work/portfolio/proam-board.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+
+<style>
+:root{
+  --paper:#FFFFFF;
+  --surface:#FFFFFF;
+  --ink:#12131A;
+  --muted:#63686D;
+  --line:#DFE4E6;
+  --line-soft:#EBEFF1;
+  --accent:#2443FF;
+  --accent-bright:#FF5A1F;
+  --accent-ink:#12131A;
+  --shadow:0 1px 2px rgba(13,15,18,.05), 0 10px 28px rgba(13,15,18,.06);
+  --display:Archivo,Manrope,"Helvetica Neue",Arial,sans-serif;
+  --body:Manrope,"Helvetica Neue",Arial,sans-serif;
+  --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gut:clamp(16px,4vw,56px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#12131A; --surface:#161A1E; --ink:#F4F6F7; --muted:#9AA0A6;
+    --line:#252A2F; --line-soft:#1D2226; --accent:#FF5A1F; --accent-bright:#FF5A1F;
+    --accent-ink:#1528A8;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12131A; --surface:#161A1E; --ink:#F4F6F7; --muted:#9AA0A6;
+  --line:#252A2F; --line-soft:#1D2226; --accent:#FF5A1F; --accent-bright:#FF5A1F;
+  --accent-ink:#1528A8;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block; max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+.wrap{width:100%; max-width:1240px; margin:0 auto; padding-inline:var(--gut)}
+
+/* ---------- top bar ---------- */
+.bar{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:30;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
+}
+.bar__in{display:flex; align-items:center; gap:16px 24px; flex-wrap:wrap; padding-block:12px}
+.mark{display:flex; align-items:center; gap:10px; text-decoration:none}
+.mark img{height:40px; width:auto}
+.mark em{
+  font-family:var(--mono); font-style:normal; font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); white-space:nowrap;
+  padding-left:10px; border-left:1px solid var(--line);
+}
+@media (max-width:520px){ .mark em{display:none} }
+
+/* logo variant swap: dark-text artwork on light grounds, light-text on dark */
+.logo-ondark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .logo-onlight{display:none}
+  :root:not([data-theme="light"]) .logo-ondark{display:block}
+}
+:root[data-theme="dark"] .logo-onlight{display:none}
+:root[data-theme="dark"] .logo-ondark{display:block}
+.chips{display:flex; gap:6px; flex-wrap:wrap; margin-left:auto}
+.chip{
+  font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+  padding:6px 11px; border:1px solid var(--line); border-radius:999px;
+  background:transparent; color:var(--muted); cursor:pointer;
+  transition:color .15s, border-color .15s, background .15s;
+}
+.chip:hover{color:var(--ink); border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+
+/* ---------- masthead ---------- */
+.mast{padding-block:clamp(40px,7vw,84px) clamp(28px,4vw,44px)}
+.eyebrow{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); margin:0 0 20px;
+}
+h1{
+  font-family:var(--display); font-weight:800;
+  font-size:clamp(38px,7.2vw,76px); line-height:1.02; letter-spacing:-.035em;
+  margin:0 0 24px; max-width:16ch; text-wrap:balance;
+}
+.grad{
+  color:var(--accent);
+  background:linear-gradient(100deg,#FF5A1F,#2443FF);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.lede{font-size:clamp(17px,1.9vw,20px); line-height:1.55; max-width:62ch; margin:0 0 8px; color:var(--ink)}
+.lede + .lede{color:var(--muted); font-size:clamp(15px,1.6vw,17px)}
+
+.facts{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:1px; background:var(--line); border:1px solid var(--line);
+  margin-top:clamp(32px,5vw,48px);
+}
+.fact{background:var(--paper); padding:18px 20px}
+.fact dt{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 8px;
+}
+.fact dd{margin:0; font-size:14.5px; line-height:1.45}
+.fact dd b{font-family:var(--display); font-weight:800; font-size:26px; letter-spacing:-.02em; display:block; line-height:1.1}
+
+/* ---------- sections ---------- */
+.sec{padding-block:clamp(44px,6vw,72px); border-top:1px solid var(--line)}
+.sec[hidden]{display:none}
+.sec__head{display:flex; align-items:baseline; gap:16px 28px; flex-wrap:wrap; margin-bottom:clamp(24px,3vw,36px)}
+.sec__head h2{
+  font-family:var(--display); font-weight:800; font-size:clamp(24px,3.4vw,34px);
+  letter-spacing:-.025em; margin:0; line-height:1.05;
+}
+.sec__note{color:var(--muted); font-size:15px; max-width:56ch; margin:0}
+.count{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--muted); text-transform:uppercase; white-space:nowrap}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(270px,100%),1fr)); gap:clamp(20px,2.6vw,34px); align-items:start}
+@media (min-width:760px){ .tile.wide{grid-column:span 2} }
+
+.tile{margin:0; display:flex; flex-direction:column}
+.tile__btn{
+  display:block; width:100%; padding:0; border:1px solid var(--line-soft); background:var(--surface);
+  cursor:zoom-in; overflow:hidden; box-shadow:var(--shadow);
+  transition:border-color .18s, transform .18s;
+}
+.tile__btn:hover{border-color:var(--muted); transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){ .tile__btn, .tile__btn:hover{transition:none; transform:none} }
+.tile__btn img{width:100%; height:100%; object-fit:cover}
+.tile figcaption{padding-top:12px}
+.cap{font-size:14.5px; line-height:1.4; font-weight:500}
+.cap em{font-style:normal; color:var(--muted); font-weight:400}
+.spec{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); margin-top:6px; display:block;
+}
+
+/* ---------- method + contact ---------- */
+.method{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:clamp(24px,3vw,40px)}
+.method h3{
+  font-family:var(--display); font-weight:600; font-size:18px; letter-spacing:-.015em;
+  margin:0 0 10px; padding-top:14px; border-top:2px solid var(--accent);
+}
+.method p{margin:0; color:var(--muted); font-size:15px}
+
+.contact{
+  border-top:1px solid var(--line); margin-top:8px;
+  padding-block:clamp(48px,7vw,84px) clamp(40px,6vw,64px);
+}
+.contact h2{font-family:var(--display); font-weight:800; font-size:clamp(28px,4.6vw,46px); letter-spacing:-.03em; margin:0 0 16px; line-height:1.05; text-wrap:balance}
+.contact p{max-width:52ch; color:var(--muted); margin:0 0 28px}
+.cta{
+  display:inline-block; font-family:var(--mono); font-size:13px; letter-spacing:.06em;
+  text-transform:none; text-decoration:none;
+  background:var(--accent); color:var(--accent-ink); padding:15px 26px;
+}
+.cta:hover{filter:brightness(1.08)}
+.signoff{margin-top:clamp(40px,6vw,64px); padding-top:28px; border-top:1px solid var(--line)}
+.signoff img{height:clamp(46px,7vw,62px); width:auto}
+.signoff p{
+  font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); margin:14px 0 0;
+}
+.foot{
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); border-top:1px solid var(--line); padding-block:20px 32px;
+  display:flex; gap:12px 24px; flex-wrap:wrap; justify-content:space-between;
+}
+
+/* ---------- lightbox ---------- */
+.box{
+  position:fixed; inset:0; z-index:60; border:0; padding:0; margin:0;
+  width:100%; max-width:100%; height:100%; max-height:100%;
+  background:color-mix(in srgb, var(--paper) 94%, #000 6%); color:var(--ink);
+}
+.box::backdrop{background:rgba(8,10,12,.82)}
+.box__in{
+  height:100%; display:flex; flex-direction:column; gap:14px;
+  padding:calc(env(safe-area-inset-top,0px) + 16px) 16px calc(env(safe-area-inset-bottom,0px) + 16px);
+}
+.box img{margin:auto; max-width:100%; max-height:100%; object-fit:contain; box-shadow:var(--shadow)}
+.box__bar{display:flex; align-items:flex-start; gap:16px; justify-content:space-between}
+.box__cap{font-size:14px; line-height:1.4}
+.box__cap span{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:4px}
+.box__close{
+  flex:none; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  background:transparent; border:1px solid var(--line); color:var(--ink); padding:8px 14px; cursor:pointer;
+}
+.box__close:hover{border-color:var(--muted)}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap"><style id="redline">
+/* ---------- Redline rebrand (Oct 2026) ---------- */
+body{background:#FFFFFF!important;color:#12131A}
+[style*="Archivo"]{font-stretch:112%}
+h1[style*="Archivo"],h2[style*="Archivo"],[data-r^="h-"]{font-stretch:118%!important;letter-spacing:-.02em}
+[data-r="grad-brand"]{background:linear-gradient(100deg,#FF5A1F,#FF7A45)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.bh-green:hover,.bh-fill:hover,.bh-tealbright:hover,.bh-teal:hover,.bh-ghost:hover{background:#FF5A1F!important;color:#ffffff!important;border-color:#FF5A1F!important}
+.bh-green:hover .hero-arrow{color:#ffffff!important}
+.bh-inv:hover{background:#2443FF!important;color:#FFF1E0!important;border-color:#2443FF!important}
+/* grey secondary text sitting on cobalt bands: lift to soft white for contrast */
+:is([style*="background:#2443FF" i],[style*="background:#1C37E0" i],[style*="background:#1630C4" i],[style*="#1630C4 0%" i]) :is([style*="color:#9aa0a6" i],[style*="color:#8a8f94" i],[style*="color:#6a6f74" i],[style*="color:#63686d" i],[style*="color:#9a9fa4" i],[style*="color:#565b60" i],[style*="color:#787e84" i],[style*="color:#8f959b" i],[style*="color:#b7bcc1" i]){color:rgba(255,255,255,.78)!important}
+/* services dropdown in the top nav */
+.nav-dd{position:relative;display:inline-block}
+.nav-dd-caret{font-size:10px;margin-left:2px;display:inline-block;transition:transform .2s}
+.nav-dd:hover .nav-dd-caret,.nav-dd:focus-within .nav-dd-caret{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);padding-top:14px;display:none;z-index:60}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu{gap:0}
+.nav-dd-menu::before{content:"";position:absolute;inset:14px 0 0 0;background:#fff;border:1px solid rgba(18,19,26,.1);border-radius:18px;box-shadow:0 18px 40px -18px rgba(18,19,26,.35);z-index:-1}
+.nav-dd-col{display:flex;flex-direction:column;gap:2px;padding:18px 18px 16px;min-width:230px}
+.nav-dd-col+.nav-dd-col{border-left:1px solid rgba(18,19,26,.08)}
+.nav-dd-h{font:700 10.5px Space Mono;letter-spacing:.14em;text-transform:uppercase;color:#FF5A1F;margin:0 10px 8px}
+.nav-dd-menu a{font:600 14px Manrope;color:#12131A;text-decoration:none;padding:8px 10px;border-radius:10px;white-space:nowrap}
+.nav-dd-menu a:hover,.nav-dd-menu a:focus{background:#EEF1FF;color:#2443FF;outline:none}
+h1,h2,h3{font-stretch:112%}</style></head>
+<body>
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="mark" href="/">
+      <img class="logo-onlight" src="/assets/smc-logo.svg" alt="SMC Digital" width="640" height="174">
+      <img class="logo-ondark" src="/assets/smc-logo-ondark.svg" alt="SMC Digital" width="640" height="174">
+      <em>Selected work</em>
+    </a>
+    <nav class="chips" aria-label="Filter work by discipline">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">All work</button>
+      <button class="chip" type="button" data-f="social" aria-pressed="false">Campaign</button>
+      <button class="chip" type="button" data-f="print" aria-pressed="false">Print</button>
+      <button class="chip" type="button" data-f="screen" aria-pressed="false">Screen</button>
+      <button class="chip" type="button" data-f="pub" aria-pressed="false">Publications</button>
+      <button class="chip" type="button" data-f="web" aria-pressed="false">Web</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap mast">
+    <p class="eyebrow">Selected design work &middot; Logan, Queensland</p>
+    <h1>Design that <span class="grad">has a job to do.</span></h1>
+    <p class="lede">Campaign creative, print, big screen and web design for Queensland businesses. Everything on this page ran in the real world: posted and promoted, sent to a printer, mounted on a clubhouse TV, or published to a live domain.</p>
+    <p class="lede">Each piece is built to the client's brand and to the exact spec of where it lands, so it can be handed straight to a printer, a media buyer or a developer without a round of rework.</p>
+
+    <dl class="facts">
+      <div class="fact"><dt>Pieces shown</dt><dd><b>32</b>from live campaigns</dd></div>
+      <div class="fact"><dt>Client brands</dt><dd><b>8</b>golf, hospitality, trades, sport, travel</dd></div>
+      <div class="fact"><dt>Disciplines</dt><dd>Social &amp; paid creative, print, environmental screens, publications, web</dd></div>
+      <div class="fact"><dt>Delivered as</dt><dd>Print ready PDF, 4K screen files, sized ad sets, live pages</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ CAMPAIGN ============ -->
+  <section class="wrap sec" data-cat="social">
+    <div class="sec__head">
+      <h2>Campaign &amp; paid social</h2>
+      <p class="sec__note">A campaign is designed once as a system, then produced in every placement it needs: feed, story, print and screen, all carrying the same idea.</p>
+      <p class="count">09 pieces</p>
+    </div>
+    <div class="grid">
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1/1">
+          <img src="/assets/work/portfolio/cup-square.jpg" alt="Melbourne Cup Lunch social tile with gold trophy, watercolour florals and the Meadowbrook and Viridian logos together" loading="eager" width="1400" height="1400">
+        </button>
+        <figcaption>
+          <p class="cap">Melbourne Cup Lunch <em>&middot; Meadowbrook Golf Club &times; Viridian Advisory</em></p>
+          <span class="spec">1:1 &middot; 2160px &middot; feed + event cover</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:9/16">
+          <img src="/assets/work/portfolio/cup-story.jpg" alt="Vertical story advert for the Melbourne Cup Lunch" loading="lazy" width="787" height="1400">
+        </button>
+        <figcaption>
+          <p class="cap">Melbourne Cup, story cut <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">9:16 &middot; paid story placement</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1/1">
+          <img src="/assets/work/portfolio/fd-square.jpg" alt="Father's Day bistro social tile with an overhead spread of pub meals above a navy panel" loading="lazy" width="1400" height="1400">
+        </button>
+        <figcaption>
+          <p class="cap">Father's Day at the Bistro <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">1:1 &middot; organic + paid &middot; booking QR</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1/1">
+          <img src="/assets/work/portfolio/luke-square.jpg" alt="Navy celebration tile with three circular photos of a greenkeeper receiving an industry award" loading="lazy" width="1400" height="1400">
+        </button>
+        <figcaption>
+          <p class="cap">Award celebration <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">1:1 &middot; three circle photo device</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:4/5">
+          <img src="/assets/work/portfolio/padel-ad-50.jpg" alt="Padel Logan founding membership advert" loading="lazy" width="1080" height="1350">
+        </button>
+        <figcaption>
+          <p class="cap">Founding memberships <em>&middot; Padel Logan</em></p>
+          <span class="spec">4:5 &middot; Meta ad &middot; story cut also built</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:4/5">
+          <img src="/assets/work/portfolio/padel-ad-golf.jpg" alt="Padel Logan advert aimed at golf club members" loading="lazy" width="1080" height="1350">
+        </button>
+        <figcaption>
+          <p class="cap">Golf crossover ad <em>&middot; Padel Logan</em></p>
+          <span class="spec">4:5 &middot; Meta ad &middot; warm audience</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1/1">
+          <img src="/assets/work/portfolio/bistro-parmi.jpg" alt="Parmi day advert for the Meadowbrook Bistro" loading="lazy" width="1350" height="1350">
+        </button>
+        <figcaption>
+          <p class="cap">Parmi day <em>&middot; Meadowbrook Bistro</em></p>
+          <span class="spec">1:1 &middot; ongoing offer set</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1/1">
+          <img src="/assets/work/portfolio/minigolf-lights.jpg" alt="Mini golf under lights advert" loading="lazy" width="1350" height="1350">
+        </button>
+        <figcaption>
+          <p class="cap">Mini golf under lights <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">1:1 &middot; ongoing offer set</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:9/16">
+          <img src="/assets/work/portfolio/bistro-kids.jpg" alt="Kids eat for twelve dollars story advert" loading="lazy" width="759" height="1350">
+        </button>
+        <figcaption>
+          <p class="cap">Kids eat offer <em>&middot; Meadowbrook Bistro</em></p>
+          <span class="spec">9:16 &middot; story placement</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ PRINT ============ -->
+  <section class="wrap sec" data-cat="print">
+    <div class="sec__head">
+      <h2>Print</h2>
+      <p class="sec__note">Posters, invitations and member notices supplied as print ready PDF at 300&nbsp;dpi, with the screen versions cut from the same artwork.</p>
+      <p class="count">06 pieces</p>
+    </div>
+    <div class="grid">
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/fd-poster.jpg" alt="Father's Day A4 poster for the bistro" loading="lazy" width="1060" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Father's Day poster <em>&middot; Meadowbrook Bistro</em></p>
+          <span class="spec">A4 + A3 sign &middot; 300 dpi &middot; print PDF</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/padel-party.jpg" alt="Golf Members' Padel Party invitation over a photo of floodlit padel courts" loading="lazy" width="1060" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Golf Members' Padel Party <em>&middot; Padel Logan</em></p>
+          <span class="spec">A4 invitation &middot; Meadowbrook and Padel Logan lockup</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/padel-opening.jpg" alt="Courts opening member notice on white" loading="lazy" width="1060" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Courts opening notice <em>&middot; Padel Logan</em></p>
+          <span class="spec">A4 &middot; white edition for mono printing</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1000/1500">
+          <img src="/assets/work/portfolio/padel-timetable.jpg" alt="Social play timetable with colour coded player levels" loading="lazy" width="1000" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Social play timetable <em>&middot; Padel Logan</em></p>
+          <span class="spec">A4 wall chart &middot; level colour ramp</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:999/1500">
+          <img src="/assets/work/portfolio/padel-levels.jpg" alt="Player level guide explaining padel ratings" loading="lazy" width="999" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Player level guide <em>&middot; Padel Logan</em></p>
+          <span class="spec">A4 &middot; part of a four piece player pack</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/luke-itin.jpg" alt="A4 event itinerary for an award celebration" loading="lazy" width="1060" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Event itinerary <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">A4 &middot; table handout</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ SCREEN ============ -->
+  <section class="wrap sec" data-cat="screen">
+    <div class="sec__head">
+      <h2>Environmental &amp; big screen</h2>
+      <p class="sec__note">Artwork for screens people walk past: clubhouse televisions, a live auction display and the GPS tablets fitted to golf buggies, each drawn at native resolution for its panel.</p>
+      <p class="count">06 pieces</p>
+    </div>
+    <div class="grid">
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/9">
+          <img src="/assets/work/portfolio/proam-board.jpg" alt="Partner board for a PGA Legends Tour Pro-Am listing twenty three sponsor logos on white cards" loading="lazy" width="1920" height="1080">
+        </button>
+        <figcaption>
+          <p class="cap">Pro&#8209;Am partner board <em>&middot; Meadowbrook Golf Club, PGA Legends Tour</em></p>
+          <span class="spec">3840 &times; 2160 &middot; clubhouse TV &middot; 23 partner logos rebuilt</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/9">
+          <img src="/assets/work/portfolio/proam-auction.jpg" alt="Live auction screen for a signed Brisbane Broncos jersey" loading="lazy" width="1920" height="1080">
+        </button>
+        <figcaption>
+          <p class="cap">Live auction screen <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">4K &middot; signed jersey lot &middot; run on the night</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/9">
+          <img src="/assets/work/portfolio/cup-tv.jpg" alt="Melbourne Cup Lunch promotion designed for a wide clubhouse screen" loading="lazy" width="1800" height="1012">
+        </button>
+        <figcaption>
+          <p class="cap">Melbourne Cup clubhouse screen <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">16:9 &middot; 4K &middot; same campaign as the social set</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/9">
+          <img src="/assets/work/portfolio/luke-tv.jpg" alt="Wide screen award celebration graphic" loading="lazy" width="1800" height="1012">
+        </button>
+        <figcaption>
+          <p class="cap">Award celebration screen <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">16:9 &middot; 4K &middot; clubhouse loop</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/9">
+          <img src="/assets/work/portfolio/proam-deck.jpg" alt="Partner slide from a looping clubhouse presentation" loading="lazy" width="1800" height="1012">
+        </button>
+        <figcaption>
+          <p class="cap">Clubhouse loop slide <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">16:9 &middot; five slide rotation</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:16/10">
+          <img src="/assets/work/portfolio/proam-buggy.jpg" alt="Advertisement sized for a golf buggy GPS tablet" loading="lazy" width="1280" height="800">
+        </button>
+        <figcaption>
+          <p class="cap">Buggy GPS advert <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">1280 &times; 800 &middot; Visage display inside the buggy</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section class="wrap sec" data-cat="pub">
+    <div class="sec__head">
+      <h2>Brochures &amp; publications</h2>
+      <p class="sec__note">Documents that have to hold a reader and sell a price: tour brochures, course programmes and an internal strategy book built around real market data.</p>
+      <p class="count">06 pieces</p>
+    </div>
+    <div class="grid">
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/agv-cover.jpg" alt="Golf tour brochure cover showing a coastal links green" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Australia &amp; New&nbsp;Zealand Top&nbsp;100, cover <em>&middot; Australian Golf Vacations</em></p>
+          <span class="spec">A4 &middot; 22 day escorted tour brochure</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/agv-inner.jpg" alt="Inside page of the golf tour brochure" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Top&nbsp;100 itinerary pages <em>&middot; Australian Golf Vacations</em></p>
+          <span class="spec">A4 &middot; daily itinerary &middot; print + web PDF</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/agv-masters.jpg" alt="US Masters tour options brochure" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">US Masters 2027 tour options <em>&middot; Australian Golf Vacations</em></p>
+          <span class="spec">A4 &middot; brochure covering every package</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/ags-brochure.jpg" alt="Five day golf school brochure" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Five day golf school <em>&middot; Australian Golf Schools</em></p>
+          <span class="spec">A4 &middot; one of seven brochures</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/offerbook-1.jpg" alt="Cover of an internal offer strategy book" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Evening Offer Book, cover <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">A4 &middot; 10 pages &middot; internal strategy document</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile">
+        <button class="tile__btn" type="button" style="aspect-ratio:1061/1500">
+          <img src="/assets/work/portfolio/offerbook-2.jpg" alt="Page from the offer book showing a bar chart of competitor meal prices" loading="lazy" width="1061" height="1500">
+        </button>
+        <figcaption>
+          <p class="cap">Offer Book, market pages <em>&middot; Meadowbrook Golf Club</em></p>
+          <span class="spec">A4 &middot; price survey across 20 venues, charted</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ WEB ============ -->
+  <section class="wrap sec" data-cat="web">
+    <div class="sec__head">
+      <h2>Web &amp; landing pages</h2>
+      <p class="sec__note">Sites and campaign landing pages designed and built from scratch, mobile first, with the enquiry form and tracking wired in rather than bolted on.</p>
+      <p class="count">05 pieces</p>
+    </div>
+    <div class="grid">
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:1600/1111">
+          <img src="/assets/work/portfolio/web-padel.jpg" alt="Padel Logan home page with a large photograph of a court net" loading="lazy" width="1600" height="1111">
+        </button>
+        <figcaption>
+          <p class="cap">padellogan.com.au <em>&middot; Padel Logan</em></p>
+          <span class="spec">Full site &middot; memberships, bookings, local SEO</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:1600/1111">
+          <img src="/assets/work/portfolio/web-sots.jpg" alt="Builder website home page with an enquiry form beside the headline" loading="lazy" width="1600" height="1111">
+        </button>
+        <figcaption>
+          <p class="cap">Son of the Sea Developments <em>&middot; Brisbane renovations and decks</em></p>
+          <span class="spec">Five page site &middot; brand, copy and build</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:1600/1111">
+          <img src="/assets/work/portfolio/web-tasman.jpg" alt="Air conditioning landing page with a quote form over a Brisbane skyline" loading="lazy" width="1600" height="1111">
+        </button>
+        <figcaption>
+          <p class="cap">Air conditioning campaign page <em>&middot; Tasman Electrical</em></p>
+          <span class="spec">Landing page &middot; built to carry Google Ads traffic</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:1600/1111">
+          <img src="/assets/work/portfolio/web-qrg.jpg" alt="Reel grinding business website" loading="lazy" width="1600" height="1111">
+        </button>
+        <figcaption>
+          <p class="cap">Queensland Reel Grinding <em>&middot; turf machinery service</em></p>
+          <span class="spec">Single page &middot; price list, service area, quote</span>
+        </figcaption>
+      </figure>
+
+      <figure class="tile wide">
+        <button class="tile__btn" type="button" style="aspect-ratio:1600/1111">
+          <img src="/assets/work/portfolio/web-offer.jpg" alt="Service business launch offer page" loading="lazy" width="1600" height="1111">
+        </button>
+        <figcaption>
+          <p class="cap">Launch offer page <em>&middot; SMC Digital</em></p>
+          <span class="spec">Offer page &middot; enquiry form that qualifies</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section class="wrap sec" id="method">
+    <div class="sec__head">
+      <h2>How the work gets made</h2>
+    </div>
+    <div class="method">
+      <div>
+        <h3>Brand system first</h3>
+        <p>Each client gets a set of colours, type and layout rules that everything else is drawn from, so the tenth piece still looks like the first one.</p>
+      </div>
+      <div>
+        <h3>Built to exact spec</h3>
+        <p>Artwork is produced at the real size of its placement: 4K for the clubhouse panel, 300&nbsp;dpi for the printer, 4:5 and 9:16 for the ad account.</p>
+      </div>
+      <div>
+        <h3>One idea, every size</h3>
+        <p>A campaign is designed once, then produced across feed, story, poster and screen in a single pass, which is why a full set arrives together rather than piecemeal.</p>
+      </div>
+      <div>
+        <h3>Copy included</h3>
+        <p>The words are written as part of the design, not dropped in afterwards, and the offer, the date and the way to book are always the things you read first.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap contact">
+    <h2>Tell me what you need designed.</h2>
+    <p>Send through the brief, the deadline and where the artwork has to end up. You will get a straight answer on whether it is a fit, what it costs and when it lands.</p>
+    <a class="cta" href="mailto:sean@smcdigital.com.au?subject=Design%20enquiry">sean@smcdigital.com.au</a>
+
+    <div class="signoff">
+      <img class="logo-onlight" src="/assets/smc-logo.svg" alt="SMC Digital" width="640" height="174">
+      <img class="logo-ondark" src="/assets/smc-logo-ondark.svg" alt="SMC Digital" width="640" height="174">
+      <p>Design &middot; Web &middot; Google &amp; Meta Ads &middot; smcdigital.com.au</p>
+    </div>
+  </section>
+
+  <div class="wrap foot">
+    <span>SMC Digital &middot; Logan, Queensland</span>
+    <span>Work shown is produced for and owned by the named clients</span>
+  </div>
+</main>
+
+<dialog class="box" id="box" aria-label="Enlarged artwork">
+  <div class="box__in">
+    <div class="box__bar">
+      <p class="box__cap" id="boxCap"></p>
+      <button class="box__close" type="button" id="boxClose">Close</button>
+    </div>
+    <img id="boxImg" alt="">
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var secs = Array.prototype.slice.call(document.querySelectorAll('.sec[data-cat]'));
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      var f = c.dataset.f;
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
+      secs.forEach(function (s) { s.hidden = (f !== 'all' && s.dataset.cat !== f); });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  var box = document.getElementById('box');
+  var boxImg = document.getElementById('boxImg');
+  var boxCap = document.getElementById('boxCap');
+
+  document.querySelectorAll('.tile__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var img = b.querySelector('img');
+      var fig = b.closest('.tile');
+      var cap = fig.querySelector('.cap');
+      var spec = fig.querySelector('.spec');
+      boxImg.src = img.src;
+      boxImg.alt = img.alt;
+      boxCap.innerHTML = '';
+      boxCap.appendChild(document.createTextNode(cap.textContent));
+      var s = document.createElement('span');
+      s.textContent = spec.textContent;
+      boxCap.appendChild(s);
+      if (typeof box.showModal === 'function') { box.showModal(); }
+    });
+  });
+
+  document.getElementById('boxClose').addEventListener('click', function () { box.close(); });
+  box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+  box.addEventListener('close', function () { boxImg.removeAttribute('src'); });
+})();
+</script>
+</body>
+</html>

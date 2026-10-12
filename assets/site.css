@@ -32,30 +32,54 @@ body{margin:0;background:#ffffff;font-family:Manrope,system-ui,sans-serif;-webki
   [data-r="bars"]{left:16px!important;right:16px!important;gap:3px!important;height:200px!important}
   [data-r="baseline"]{left:16px!important;right:16px!important}
 }
-[data-r="grad-brand"]{background:linear-gradient(100deg,#42eace,#0E9E86)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+[data-r="grad-brand"]{background:linear-gradient(100deg,#FF5A1F,#2443FF)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
 [data-r="marquee"]{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
 a{transition:background .22s ease,color .22s ease,border-color .22s ease}
-.bh-green:hover{background:#42eace!important;color:#0D0F12!important}
-.bh-green:hover .hero-arrow{color:#0D0F12!important}
-.bh-fill:hover{background:#42eace!important;color:#0D0F12!important;border-color:#42eace!important}
-.bh-tealbright:hover{background:#42eace!important;color:#0D0F12!important}
-.bh-teal:hover{background:#42eace!important;color:#0D0F12!important}
-.bh-ghost:hover{background:#42eace!important;color:#0D0F12!important;border-color:#42eace!important}
-.bh-inv:hover{background:#0D0F12!important;color:#42eace!important;border-color:#42eace!important}
+.bh-green:hover{background:#FF5A1F!important;color:#12131A!important}
+.bh-green:hover .hero-arrow{color:#12131A!important}
+.bh-fill:hover{background:#FF5A1F!important;color:#12131A!important;border-color:#FF5A1F!important}
+.bh-tealbright:hover{background:#FF5A1F!important;color:#12131A!important}
+.bh-teal:hover{background:#FF5A1F!important;color:#12131A!important}
+.bh-ghost:hover{background:#FF5A1F!important;color:#12131A!important;border-color:#FF5A1F!important}
+.bh-inv:hover{background:#2443FF!important;color:#FF5A1F!important;border-color:#FF5A1F!important}
 @media (max-width:860px){.sec2{grid-template-columns:1fr!important}}
 @keyframes smcMarquee{to{transform:translateX(-50%)}}
 @keyframes smcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 @keyframes smcSpin{to{transform:rotate(360deg)}}
 /* nav + footer links */
 .navlink{color:#3a3f44;text-decoration:none}
-.navlink:hover{color:#0D0F12}
+.navlink:hover{color:#12131A}
 .flink{color:#3a3f44;text-decoration:none}
-.flink:hover{color:#0E9E86}
-.tlink{font:700 13px Manrope;color:#0E9E86;text-decoration:none}
-.tlink:hover{color:#0D0F12}
+.flink:hover{color:#2443FF}
+.tlink{font:700 13px Manrope;color:#2443FF;text-decoration:none}
+.tlink:hover{color:#12131A}
 /* client brand logos */
-.client-brand{font:700 22px Poppins;color:#9aa0a6;white-space:nowrap}
+.client-brand{font:700 22px Archivo;color:#9aa0a6;white-space:nowrap}
 .client-brand-img{height:44px;width:auto;max-width:220px;object-fit:contain;display:block;flex:none}
 /* case study + service cards */
 .card-link{text-decoration:none;display:flex;flex-direction:column;height:100%}
-.card-link:hover h3{color:#0E9E86}
+.card-link:hover h3{color:#2443FF}
+
+/* ---------- Redline rebrand (Oct 2026) ---------- */
+body{background:#FFFFFF!important;color:#12131A}
+[style*="Archivo"]{font-stretch:112%}
+h1[style*="Archivo"],h2[style*="Archivo"],[data-r^="h-"]{font-stretch:118%!important;letter-spacing:-.02em}
+[data-r="grad-brand"]{background:linear-gradient(100deg,#FF5A1F,#FF7A45)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.bh-green:hover,.bh-fill:hover,.bh-tealbright:hover,.bh-teal:hover,.bh-ghost:hover{background:#FF5A1F!important;color:#ffffff!important;border-color:#FF5A1F!important}
+.bh-green:hover .hero-arrow{color:#ffffff!important}
+.bh-inv:hover{background:#2443FF!important;color:#FFF1E0!important;border-color:#2443FF!important}
+/* grey secondary text sitting on cobalt bands: lift to soft white for contrast */
+:is([style*="background:#2443FF" i],[style*="background:#1C37E0" i],[style*="background:#1630C4" i],[style*="#1630C4 0%" i]) :is([style*="color:#9aa0a6" i],[style*="color:#8a8f94" i],[style*="color:#6a6f74" i],[style*="color:#63686d" i],[style*="color:#9a9fa4" i],[style*="color:#565b60" i],[style*="color:#787e84" i],[style*="color:#8f959b" i],[style*="color:#b7bcc1" i]){color:rgba(255,255,255,.78)!important}
+/* services dropdown in the top nav */
+.nav-dd{position:relative;display:inline-block}
+.nav-dd-caret{font-size:10px;margin-left:2px;display:inline-block;transition:transform .2s}
+.nav-dd:hover .nav-dd-caret,.nav-dd:focus-within .nav-dd-caret{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);padding-top:14px;display:none;z-index:60}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu{gap:0}
+.nav-dd-menu::before{content:"";position:absolute;inset:14px 0 0 0;background:#fff;border:1px solid rgba(18,19,26,.1);border-radius:18px;box-shadow:0 18px 40px -18px rgba(18,19,26,.35);z-index:-1}
+.nav-dd-col{display:flex;flex-direction:column;gap:2px;padding:18px 18px 16px;min-width:230px}
+.nav-dd-col+.nav-dd-col{border-left:1px solid rgba(18,19,26,.08)}
+.nav-dd-h{font:700 10.5px Space Mono;letter-spacing:.14em;text-transform:uppercase;color:#FF5A1F;margin:0 10px 8px}
+.nav-dd-menu a{font:600 14px Manrope;color:#12131A;text-decoration:none;padding:8px 10px;border-radius:10px;white-space:nowrap}
+.nav-dd-menu a:hover,.nav-dd-menu a:focus{background:#EEF1FF;color:#2443FF;outline:none}
